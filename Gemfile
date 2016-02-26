@@ -24,6 +24,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'bootstrap', '~> 4.0.0.alpha3'
 # Integrates normalize.css with the rails asset pipeline.
 gem 'normalize-rails'
+# Font-Awesome
+gem "font-awesome-rails"
 # A fast, safe and extensible Markdown to (X)HTML parser
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 # Devise
