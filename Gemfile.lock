@@ -93,6 +93,10 @@ GEM
     normalize-rails (3.0.3)
     orm_adapter (0.5.0)
     pg (0.18.4)
+    pg_search (1.0.5)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
+      arel
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -181,6 +185,7 @@ DEPENDENCIES
   jquery-rails
   normalize-rails
   pg
+  pg_search
   rails (= 4.2.5)
   rails_12factor
   redcarpet (~> 3.3, >= 3.3.4)
