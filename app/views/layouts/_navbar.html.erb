@@ -10,7 +10,6 @@
       <li class="nav-item">
         <%= link_to current_user.email, edit_user_registration_path, class: "nav-link" %>
       </li>
-
     <% else %>
       <li class="nav-item">
         <%= link_to new_user_registration_path, class: "nav-link" do %>
@@ -33,7 +32,7 @@
       </li>
     <% end %>
     <li class="nav-item">
-      <a class="nav-link" href="#">About</a>
+      <%= link_to "New Article", new_article_path, class: "nav-link" %>
     </li>
   </ul>
   <form class="form-inline pull-xs-right">
