@@ -1,6 +1,6 @@
 class Article < ActiveRecord::Base
   include PgSearch
-  pg_search_scope :search, against: [:name]
+  pg_search_scope :search, against: [:title, :body]
   validates :title, presence: true, length: { minimum: 5}
   validates :body, presence: true, length: { minimum: 10}
   has_many :comments, dependent: :destroy
