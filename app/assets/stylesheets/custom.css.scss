@@ -1,5 +1,9 @@
 @import "bootstrap";
 
+.body-padding {
+  margin-bottom: 30px;
+  // margin-top: 30px;
+}
 .article-actions {
   border-top: 1px solid #eaeaea;
   padding-top: 5px;
@@ -29,3 +33,34 @@
   margin-top: 5px;
 }
 
+.content-show {
+  padding-top: 5px;
+}
+
+.exciting-navbar {
+  margin-bottom: 30px;
+}
+
+.title-show {
+  margin-bottom: 25px;
+}
+
+.comment {
+  margin-top: 25px;
+}
+
+.comment-title {
+  margin-top: 5px;
+}
+
+.comment-content {
+  margin-bottom: 0px;
+}
+
+small {
+  font-size: 60%;
+}
+
+.comment-wrapper {
+  margin-left: -12px;
+}

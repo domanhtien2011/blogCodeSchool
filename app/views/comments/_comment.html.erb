@@ -1,0 +1,12 @@
+<div>
+  <p class="comment-title">
+    <strong><%= comment.name %></strong>
+  </p>
+  <p class="comment-content">
+    <%= comment.body %>
+  </p>
+  <small class="text-muted">
+    <%= time_ago_in_words(comment.created_at) %> Ago
+  </small class="text-muted">
+  <hr>
+</div>

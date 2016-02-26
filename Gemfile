@@ -26,6 +26,10 @@ gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'normalize-rails'
 # A fast, safe and extensible Markdown to (X)HTML parser
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'
+# Devise
+gem 'devise'
+# Bootstrap for Devise
+gem 'devise-bootstrap-views'
 
 
 # bundle exec rake doc:rails generates the API under doc/api.
