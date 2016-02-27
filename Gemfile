@@ -65,3 +65,4 @@ end
 gem 'pg_search'
 gem 'acts-as-taggable-on'
 gem 'impressionist'
+gem 'acts_as_votable', '~> 0.10.0'
