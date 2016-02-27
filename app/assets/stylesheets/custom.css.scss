@@ -30,8 +30,22 @@
 
 .time-submit {
   float: left;
-  margin-left: 17px;
+  margin-left: 20px;
   margin-top: 5px;
+}
+
+.time-submit-show {
+  float: left;
+  margin-left: 0px;
+  margin-top: 5px;
+}
+
+.view-page {
+  margin-bottom: 0px;
+}
+
+.index-view-page {
+  padding-left: 20px;
 }
 
 .content-show {
@@ -99,6 +113,28 @@ small {
   margin-bottom: 30px;
 }
 
+.tag {
+  color: gray;
+  font-size: 80%;
+  padding-left: 20px;
+  margin-bottom: 5px;
+}
+
+.tag-show {
+  padding-left: 0px;
+  color: gray;
+  font-size: 80%;
+  margin-bottom: 5px;
+}
+
+.tag_cloud {
+  width: 60px;
+  line-height: 1.6em;
+  .s { font-size: 0.8em; }
+  .m { font-size: 1.2em; }
+  .l { font-size: 1.8em; }
+}
+
 // Custom search form
 #custom-search-input {
     margin: 0;
@@ -141,3 +177,4 @@ small {
 .navbar-custom-form {
   padding-bottom: 15px !important;
 }
+

@@ -63,3 +63,5 @@ group :production do
 end
 
 gem 'pg_search'
+gem 'acts-as-taggable-on'
+gem 'impressionist'

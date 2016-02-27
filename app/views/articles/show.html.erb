@@ -5,11 +5,20 @@
 <div class="card col-sm-8 col-sm-offset-2">
     <div class="content-show">
       <%= simple_format(@article.body) %>
+      <p class="tag-show">
+        Tags: <%= raw @article.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
+      </p>
+      <span class="fa fa-eye view-page text-muted">        <%= @article.impressionist_count %>
+      </span>
     </div>
-    <div class="article-actions text-sm-right">
-      <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-sm btn-primary" %>
-      <%= link_to 'Delete', article_url(@article), method: :delete, data: { confirm: "Are you sure you want to delete this article?" }, class: "btn btn-sm btn-danger" %>
-      <%= link_to 'View All Articles', articles_path, class: "btn btn-sm btn-success" %>
+
+
+    <div class="article-actions text-sm-right clearfix">
+      <small class="time-submit-show text-muted">Submitted <%= time_ago_in_words(@article.created_at) %> ago</small>
+      <% if user_signed_in? && @article.user_id == current_user.id  %>
+        <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-sm btn-primary" %>
+        <%= link_to 'Delete', article_url(@article), method: :delete, data: { confirm: "Are you sure you want to delete this article?" }, class: "btn btn-sm btn-danger" %>
+      <% end %>
     </div>
 </div>
 
