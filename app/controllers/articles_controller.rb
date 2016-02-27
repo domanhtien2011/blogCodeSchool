@@ -1,7 +1,8 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_article, only: [:show, :edit, :update, :destroy, :upvote]
+  before_action :authenticate_user!, except: [:index, :show, :upvote]
   before_action :require_same_user, only: [:edit, :update, :destroy]
+  before_action :login_like, only: [:upvote]
   impressionist actions: [:show]
 
   # GET /articles
@@ -78,6 +79,11 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def upvote
+    @article.upvote_from current_user
+    redirect_to :back
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_article
@@ -93,6 +99,12 @@ class ArticlesController < ApplicationController
       if current_user.id != @article.user_id
         flash[:danger] = "You can only edit or delete your own articles!"
         redirect_to(root_path)
+      end
+    end
+
+    def login_like
+      if !user_signed_in?
+        flash[:danger] = "You must log in to like this article!"
       end
     end
 end

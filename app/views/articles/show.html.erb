@@ -3,12 +3,17 @@
 </h2>
 
 <div class="card col-sm-8 col-sm-offset-2">
-    <div class="content-show">
+    <div class="content-show clearfix">
       <%= simple_format(@article.body) %>
       <p class="tag-show">
         Tags: <%= raw @article.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
       </p>
       <span class="fa fa-eye view-page text-muted">        <%= @article.impressionist_count %>
+      </span>
+      <span class="like-show text-sm-right">
+        <%= link_to like_article_path(@article), method: :put do %>
+          <span class="fa fa-heart"> <%= @article.get_upvotes.size %></span>
+        <% end %>
       </span>
     </div>
 

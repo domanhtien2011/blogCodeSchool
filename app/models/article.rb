@@ -3,6 +3,7 @@ class Article < ActiveRecord::Base
   include PgSearch
   pg_search_scope :search, against: [:title, :body]
   acts_as_taggable
+  acts_as_votable
   validates :user_id, presence: true
   validates :title, presence: true, length: { minimum: 5}
   validates :body, presence: true, length: { minimum: 10}

@@ -3,7 +3,15 @@
     <% @articles.each do |article| %>
       <div class="card">
         <div class="card-block clearfix">
-          <h4 class="card-title article-title"><%= link_to article.title, article %></h4>
+          <h4 class="card-title article-title"><%= link_to article.title, article %>
+            <span class="like text-sm-right">
+              <%= link_to like_article_path(article), method: :put do %>
+                <span class="fa fa-heart"> <%= article.get_upvotes.size %></span>
+              <% end %>
+            </span>
+
+          </h4>
+
           <small class="text-muted"><%= article.created_at.strftime("%B, %d, %Y")  %></small>
           <p class="card-text article-body"><%= @markdown.render(article.body).html_safe %></p>
         </div>
@@ -16,6 +24,8 @@
           <span class="fa fa-eye index-view-page text-muted"> <%= article.impressionist_count %>
           </span>
         </p>
+
+
 
         <div class="article-actions text-sm-right clearfix">
           <small class="time-submit text-muted">Submitted <%= time_ago_in_words(article.created_at) %> ago, by <%= article.user.email %></small>
