@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  patch '/articles/:id', to: 'articles#destroy'
   get 'tags/:tag', to: 'articles#index', as: :tag
-  resources :articles, except: [:destroy] do
+  resources :articles do
     member do
       put "like", to: "articles#upvote"
     end
