@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  get '/articles/:id', to: 'articles#destroy'
+  patch '/articles/:id', to: 'articles#destroy'
   get 'tags/:tag', to: 'articles#index', as: :tag
   resources :articles, except: [:destroy] do
     member do
