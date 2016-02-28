@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'tags/:tag', to: 'articles#index', as: :tag
   resources :articles do
     member do
-      put "like" => "articles#upvote"
+      patch "like", to: "articles#upvote"
     end
     resources :comments
   end
