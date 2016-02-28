@@ -9,14 +9,14 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     if params[:search].present?
-      @articles = Article.search(params[:search]).order('created_at DESC')
+      @articles = Article.search(params[:search]).order('created_at DESC').paginate(page: params[:page], per_page: 3)
       if params[:tag]
-        @articles = Article.tagged_with(params[:tag])
+        @articles = Article.tagged_with(params[:tag]).paginate(page: params[:page], per_page: 3)
       end
     else
-      @articles = Article.all.order('created_at DESC')
+      @articles = Article.all.order('created_at DESC').paginate(page: params[:page], per_page: 3)
       if params[:tag]
-        @articles = Article.tagged_with(params[:tag])
+        @articles = Article.tagged_with(params[:tag]).paginate(page: params[:page], per_page: 3)
       end
     end
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
@@ -108,3 +108,4 @@ class ArticlesController < ApplicationController
       end
     end
 end
+

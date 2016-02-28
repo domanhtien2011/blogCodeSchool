@@ -28,9 +28,11 @@
 </div>
 
 <div class="card col-sm-8 col-sm-offset-2 comment">
-  <h2 style="padding-top: 7px;">
-    <%= @article.comments.count %> Comments
-  </h2>
+  <% if @article.comments.count > 0 %>
+    <h2 style="padding-top: 7px;"><%= @article.comments.count %> Comments</h2>
+  <% else %>
+    <h2 style="padding-top: 7px;"><%= @article.comments.count %>                   Comment </h2>
+  <% end %>
 
   <hr>
   <%= render @article.comments %>
