@@ -3,9 +3,13 @@ Rails.application.routes.draw do
   get 'tags/:tag', to: 'articles#index', as: :tag
   resources :articles do
     member do
-      get "like", to: "articles#upvote"
+      put "like", to: "articles#upvote"
     end
-    resources :comments
+    resources :comments do
+      member do
+        get "like", to: "comments#upvote"
+      end
+    end
   end
   root 'articles#index'
   # The priority is based upon order of creation: first created -> highest priority.

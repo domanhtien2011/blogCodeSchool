@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-
+  before_action :login_like, only:[:upvote]
   def create
     @article = Article.find(params[:article_id])
     @comment = @article.comments.create(params[:comment].permit(:name, :body))
@@ -14,4 +14,19 @@ class CommentsController < ApplicationController
 
     redirect_to(article_path(@article))
   end
+
+  def upvote
+    @article = Article.find(params[:article_id])
+    @comment = @article.comments.find(params[:id])
+   @comment.upvote_from current_user
+    redirect_to(:back)
+  end
+
+  private
+
+    def login_like
+      if !user_signed_in?
+        flash[:danger] = "You must log in to like this article!"
+      end
+    end
 end

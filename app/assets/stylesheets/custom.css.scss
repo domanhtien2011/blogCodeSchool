@@ -55,7 +55,7 @@
 }
 
 .like a:hover {
-  color: deeppink;
+  color: pink;
 }
 
 .like-show {
@@ -63,9 +63,16 @@
 }
 
 .like-show a:hover {
-  color: deeppink;
+  color: pink;
 }
 
+.like-comment {
+  font-size: 75%;
+}
+
+.like-comment a:hover {
+  color: pink;
+}
 .content-show {
   padding-top: 5px;
 }
