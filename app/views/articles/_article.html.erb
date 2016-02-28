@@ -24,7 +24,7 @@
         </p>
 
         <p>
-          <span class="fa fa-eye index-view-page text-muted"> <%= article.impressionist_count %>
+          <span class="fa fa-eye index-view-page text-muted"> <%= article.impressionist_count(:filter=>:session_hash) %>
           </span>
         </p>
 
