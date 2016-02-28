@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :comments do
       member do
         get "like", to: "comments#upvote"
+        get "dislike", to: "comments#downvote"
       end
     end
   end

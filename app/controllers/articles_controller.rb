@@ -81,7 +81,6 @@ class ArticlesController < ApplicationController
 
   def upvote
     @article.upvote_from current_user
-    flash[:success] = "You've just liked the article"
     redirect_to :back
   end
 

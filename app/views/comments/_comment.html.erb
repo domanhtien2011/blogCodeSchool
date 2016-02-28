@@ -8,11 +8,21 @@
   <small class="text-muted">
     <%= time_ago_in_words(comment.created_at) %> ago
   </small>
-  <p class="like-comment">
-    <%= link_to like_article_comment_url(@article, comment), method: :get do %>
-      <span class="fa fa-thumbs-up"> <%= comment.get_upvotes.size %></span>
-    <% end %>
+  <p class="comment-reputation clearfix">
+    <span class="like-comment">
+      <%= link_to like_article_comment_url(@article, comment), method: :get do %>
+        <span class="fa fa-thumbs-up"> <%= comment.get_upvotes.size %></span>
+      <% end %>
+    </span>
+    <p class="dislike-comment">
+      <%= link_to dislike_article_comment_url(@article, comment), method: :get do %>
+        <span class="fa fa-thumbs-down"> <%= comment.get_downvotes.size %></span>
+      <% end %>
+    </p>
   </p>
+
+
+
   <p class="text-sm-right">
     <% if user_signed_in? && current_user.id == @article.user_id %>
       <%= link_to 'Delete', [comment.article, comment], method: :delete, class: "btn btn-secondary btn-sm", data: { confirm: "Are you sure you want to delete this comment?" } %>

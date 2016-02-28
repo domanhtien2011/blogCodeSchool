@@ -67,7 +67,21 @@
 }
 
 .like-comment {
+  float: right;
   font-size: 75%;
+}
+
+.dislike-comment {
+  float: right;
+  font-size: 75%;
+}
+
+.comment-reputation {
+  display: inline;
+}
+
+.dislike-comment a:hover {
+  color: red;
 }
 
 .like-comment a:hover {
