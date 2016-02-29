@@ -96,7 +96,7 @@ class ArticlesController < ApplicationController
     end
 
     def require_same_user
-      if current_user.id != @article.user_id || current_user.admin != true
+      if current_user.id != @article.user_id && current_user.admin != true
         flash[:danger] = "You can only edit or delete your own articles!"
         redirect_to(root_path)
       end
