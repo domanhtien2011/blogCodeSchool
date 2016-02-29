@@ -4,7 +4,7 @@ Time spent: **24** hours spent in total
 URL: **http://blog1989.herokuapp.com/**
 ## User Stories
 The following **required** functionality is complete:
-* [ ] User can create a new post, formatted using the Markdown language.
+* [x] User can create a new post, formatted using the Markdown language.
 * [x] User can edit an existing post.
 * [x] There is one post that introduces the App Creator with name, picture.
 * [x] User can delete stories, with an alert that asks the user to confirm.
