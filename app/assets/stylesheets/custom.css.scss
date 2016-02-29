@@ -1,10 +1,15 @@
 @import "bootstrap";
 @import "font-awesome";
 
+body {
+  font-family: 'Nunito', sans-serif !important;
+}
+
 .body-padding {
   margin-bottom: 30px;
-  // margin-top: 30px;
 }
+
+
 
 .glassy {
   box-shadow:rgba(0,0,0,0.5) 0px 0px 24px;
