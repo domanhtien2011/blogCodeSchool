@@ -34,6 +34,14 @@ My challenges when building the app are:
 * Deadline because I got the announcement last weekend, and have 2 jobs currently. And I can add some more functionalities to it like more Ajax, styling for the page, and so on... if I have more time
 * Anyway, I think it is fun ^^
 
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+> `![Video Walkthrough](walkthrough.gif)`
+>
+![Video Walkthrough](/blogCodeSchool/walkthrough.gif)
+GIF created with[Byzanz](https://github.com/GNOME/byzanz)
+
 ## License
 
     Copyright [2016] [Tiến Mạnh Đỗ]
