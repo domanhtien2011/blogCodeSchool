@@ -39,8 +39,8 @@ My challenges when building the app are:
 Here's a walkthrough of implemented user stories:
 > `![Video Walkthrough](walkthrough.gif)`
 >
-![Video Walkthrough](/blogCodeSchool/walkthrough.gif)
-GIF created with[Byzanz](https://github.com/GNOME/byzanz)
+![Video Walkthrough](https://github.com/domanhtien2011/blogCodeSchool/blob/master/walkthrough.gif)
+GIF created with [Byzanz](https://github.com/GNOME/byzanz)
 
 ## License
 
