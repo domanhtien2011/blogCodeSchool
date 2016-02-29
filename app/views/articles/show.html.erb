@@ -2,7 +2,7 @@
   <%= @article.title %>
 </h2>
 
-<div class="card col-sm-8 col-sm-offset-2">
+<div class="card col-sm-8 col-sm-offset-2 glassy">
     <div class="content-show clearfix">
       <%= simple_format(@article.body) %>
       <p class="tag-show">
@@ -27,7 +27,7 @@
     </div>
 </div>
 
-<div class="card col-sm-8 col-sm-offset-2 comment">
+<div class="card col-sm-8 col-sm-offset-2 comment glassy">
   <% if @article.comments.count > 1 %>
     <h2 style="padding-top: 7px;"><%= @article.comments.count %> Comments</h2>
   <% else %>

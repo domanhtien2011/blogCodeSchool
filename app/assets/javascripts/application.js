@@ -15,3 +15,5 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+// Remember to add bootstrap-sprockets under jquery-ujs. Otherwise, it is gonna mess up delete request on heroku
