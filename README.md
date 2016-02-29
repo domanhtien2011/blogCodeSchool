@@ -21,6 +21,7 @@ The following **additional** features are implemented:
 * [x] User can signup, login, logout to create their articles.
 * [x] Show their profile image if they have an avatar account
 * [x] Just authenticated user can create new articles.
+* [x] Authenticated user can like articles, like, dislike comments.
 * [x] Just the author has the permission to delete their articles and comments on their articles
 * [x] If a user is ad admin, he/she can delete all the articles and comment
 * [x] User can search not only the title of the article but also its content in one search form
