@@ -18,13 +18,13 @@ The following **optional** features are implemented:
 * [x] User can add "tags" to a post, and filter posts by tag.
 
 The following **additional** features are implemented:
-[x] User can signup, login, logout to create their articles.
-[x] Just authenticated user can create new articles.
-[x] Just the author has the permission to delete their articles and comments on their articles
-[x] If a user is ad admin, he/she can delete all the articles and comment
-[x] User can search not only the title of the article but also its content in one search form
-[x] Posting comment without reloading the page
-[x] User can see at most 3 articles per page. Avoiding the frustration to scroll down the page
+* [x] User can signup, login, logout to create their articles.
+* [x] Just authenticated user can create new articles.
+* [x] Just the author has the permission to delete their articles and comments on their articles
+* [x] If a user is ad admin, he/she can delete all the articles and comment
+* [x] User can search not only the title of the article but also its content in one search form
+* [x] Posting comment without reloading the page
+* [x] User can see at most 3 articles per page. Avoiding the frustration to scroll down the page
 
 ## Notes
 My challenges when building the app are:
