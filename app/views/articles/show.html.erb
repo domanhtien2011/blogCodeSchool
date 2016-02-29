@@ -26,16 +26,13 @@
       <% end %>
     </div>
 </div>
-
-<div class="card col-sm-8 col-sm-offset-2 comment glassy-comment">
-  <% if @article.comments.count > 1 %>
-    <h2 style="padding-top: 7px;"><%= @article.comments.count %> Comments</h2>
-  <% else %>
-    <h2 style="padding-top: 7px;"><%= @article.comments.count %>                   Comment </h2>
-  <% end %>
-
+<p class="col-sm-8 col-sm-offset-2"><%= link_to "Comments", "#", id: "comments-link" %></p>
+<div class="card col-sm-8 col-sm-offset-2 comments-section glassy-comment">
+    <h2 style="padding-top: 7px;">                   Comment </h2>
   <hr>
-  <%= render @article.comments %>
+  <div id="comments">
+    <%= render @article.comments %>
+  </div>
   <h3>Add a comment:</h3>
   <div class="comment-wrapper">
     <%= render 'comments/form' %>

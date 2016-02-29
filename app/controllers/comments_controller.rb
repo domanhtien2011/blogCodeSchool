@@ -4,8 +4,12 @@ class CommentsController < ApplicationController
   before_action :login_like, only:[:upvote, :downvote]
   def create
     @comment = @article.comments.create(params[:comment].permit(:name, :body))
-    @comment.save
-    redirect_to(@article)
+    if @comment.save
+      respond_to do |format|
+        format.html { redirect_to(@article) }
+        format.js # render 'create.js.erb'
+      end
+    end
   end
 
   def destroy
