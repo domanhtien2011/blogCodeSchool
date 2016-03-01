@@ -13,8 +13,12 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @comment.destroy
-    redirect_to(article_path(@article))
+    if @comment.destroy
+      respond_to do |format|
+        format.html { redirect_to(article_path(@article)) }
+        format.js
+      end
+    end
   end
 
   def upvote
