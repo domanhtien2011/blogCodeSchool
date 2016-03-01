@@ -1,3 +1,5 @@
-$('#comments').append("<%= j render @comment %>");
+$('#comments').append("<%= j render @comment %>").hide().fadeIn(3000);
+
+
 $('#comment_name').val("");
 $('#comment_body').val("");
