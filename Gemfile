@@ -68,3 +68,5 @@ gem 'impressionist'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'will_paginate', '~> 3.0.6'
 gem 'simple_form'
+gem 'carrierwave'
+gem "mini_magick"

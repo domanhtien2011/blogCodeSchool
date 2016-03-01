@@ -12,11 +12,15 @@
                 <span class="fa fa-heart"> <%= article.get_upvotes.size %></span>
               <% end %>
             </span>
-
           </h4>
 
           <small class="text-muted"><%= article.created_at.strftime("%B, %d, %Y")  %></small>
-          <p class="card-text article-body"><%= @markdown.render(article.body).html_safe %></p>
+          <p class="card-text article-body">
+            <% if article.picture? %>
+                <%= image_tag(article.picture.url, size: "350x250", class: "img-fluid img-circle center-block picture-index") %>
+            <% end %>
+            <%= @markdown.render(article.body).html_safe %>
+          </p>
         </div>
 
         <p class="tag">

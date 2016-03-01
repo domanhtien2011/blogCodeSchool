@@ -9,4 +9,5 @@ class Article < ActiveRecord::Base
   validates :body, presence: true, length: { minimum: 10}
   has_many :comments, dependent: :destroy
   belongs_to :user
+  mount_uploader :picture, PictureUploader
 end

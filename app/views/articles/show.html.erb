@@ -1,9 +1,11 @@
-<h2 align="center" class="title-show">
-  <%= @article.title %>
-</h2>
-
 <div class="card col-sm-8 col-sm-offset-2 glassy">
+  <h2 class="title-show text-sm-center">
+    <%= @article.title %>
+  </h2>
     <div class="content-show clearfix">
+      <% if @article.picture? %>
+          <%= image_tag(@article.picture.url, size: "350x250", class: "img-fluid center-block picture img-circle") %>
+      <% end %>
       <%= simple_format(@article.body) %>
       <p class="tag-show">
         Tags: <%= raw @article.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
