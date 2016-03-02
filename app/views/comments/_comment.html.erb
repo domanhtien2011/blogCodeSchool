@@ -10,13 +10,13 @@
   </small>
   <p class="comment-reputation clearfix">
     <span class="like-comment">
-      <%= link_to like_article_comment_url(@article, comment), method: :get do %>
-        <span class="fa fa-thumbs-up"> <%= comment.get_upvotes.size %></span>
+      <%= link_to like_article_comment_url(@article, comment), method: :get, remote: true do %>
+        <span class="fa fa-thumbs-up" id="thumbs-up"> <%= comment.get_upvotes.size %></span>
       <% end %>
     </span>
     <p class="dislike-comment">
-      <%= link_to dislike_article_comment_url(@article, comment), method: :get do %>
-        <span class="fa fa-thumbs-down"> <%= comment.get_downvotes.size %></span>
+      <%= link_to dislike_article_comment_url(@article, comment), method: :get, remote: true do %>
+        <span class="fa fa-thumbs-down" id="thumbs-down"> <%= comment.get_downvotes.size %></span>
       <% end %>
     </p>
   </p>

@@ -32,8 +32,6 @@
           </span>
         </p>
 
-
-
         <div class="article-actions text-sm-right clearfix">
           <small class="time-submit text-muted">Submitted <%= time_ago_in_words(article.created_at) %> ago, by <%= article.user.email %></small>
             </div>
@@ -42,7 +40,7 @@
     <% end %>
   </div>
 
-  <div class="tag_cloud pull-sm-right col-sm-2">
+  <div class="tag_cloud pull-sm-right col-sm-2 hidden-sm-down">
     <% tag_cloud Article.tag_counts, %w[s m l] do |tag, css_class| %>
       <%= link_to tag.name, tag_path(tag.name), class: css_class %>
     <% end %>

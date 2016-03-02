@@ -22,13 +22,21 @@ class CommentsController < ApplicationController
   end
 
   def upvote
-   @comment.upvote_from current_user
-    redirect_to(:back)
+    if @comment.upvote_from current_user
+      respond_to do |format|
+        format.html { redirect_to(:back) }
+        format.js
+      end
+    end
   end
 
   def downvote
-   @comment.downvote_from current_user
-    redirect_to(:back)
+    if @comment.downvote_from current_user
+      respond_to do |format|
+        format.html { redirect_to(:back) }
+        format.js
+      end
+    end
   end
 
   private

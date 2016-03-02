@@ -17,3 +17,27 @@
 //= require_tree .
 
 // Remember to add bootstrap-sprockets under jquery-ujs. Otherwise, it is gonna mess up delete request on heroku
+
+function myFunction () {
+   var x = "Total Width: " + $(window).width() + "px";
+   document.getElementById("demo").innerHTML = x;
+};
+
+// $(document).ready(function () {
+//    function hideTagCloud () {
+//       if ($(window).width() < 760)  {
+//         $(".tag_cloud").hide();
+//       }
+//    };
+
+//    function showTagCloud () {
+//       if ($(window).width() >= 760)  {
+//         $(".tag_cloud").show();
+//       }
+//    };
+//    hideTagCloud();
+//    showTagCloud();
+// });
+
+
+

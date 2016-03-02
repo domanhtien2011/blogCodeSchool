@@ -1,8 +1,10 @@
-<div class="card col-sm-8 col-sm-offset-2 glassy">
-  <h2 class="title-show text-sm-center">
+<div class="row clearfix">
+<div class="card  col-sm-8 col-sm-offset-2 glassy">
+  <div class="card-block">
+  <h2 class="title-show text-sm-center card-title">
     <%= @article.title %>
   </h2>
-    <div class="content-show clearfix">
+    <div class="card-text content-show clearfix">
       <% if @article.picture? %>
           <%= image_tag(@article.picture.url, size: "350x250", class: "img-fluid center-block picture img-circle") %>
       <% end %>
@@ -28,6 +30,15 @@
       <% end %>
     </div>
 </div>
+</div>
+
+
+  <div class="tag_cloud pull-sm-right col-sm-2 hidden-sm-down">
+    <% tag_cloud Article.tag_counts, %w[s m l] do |tag, css_class| %>
+      <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+    <% end %>
+  </div>
+
 <div class="card col-sm-8 col-sm-offset-2 comments-section glassy-comment">
     <h2 style="padding-top: 7px;">                   Comment </h2>
   <hr>
@@ -39,6 +50,6 @@
     <%= render 'comments/form' %>
   </div>
 </div>
-
+</div>
 
 
