@@ -1,7 +1,9 @@
 class Article < ActiveRecord::Base
   is_impressionable
   include PgSearch
-  pg_search_scope :search, against: [:title, :body]
+  pg_search_scope :search, against: [:title, :body], :using => {
+                    :tsearch => {:prefix => true}
+                  }
   acts_as_taggable
   acts_as_votable
   validates :user_id, presence: true
